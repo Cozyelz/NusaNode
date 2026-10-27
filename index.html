@@ -90,23 +90,31 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 11px;
 
             text-decoration: none;
             color: white;
 
-            background: rgba(6, 74, 135, 0.85);
-            border: 1px solid rgba(22, 131, 255, 0.35);
+            background: linear-gradient(
+                135deg,
+                rgba(6, 74, 135, 0.95),
+                rgba(4, 55, 101, 0.95)
+            );
 
-            padding: 16px;
-            margin: 12px 0;
+            border: 1px solid rgba(22, 131, 255, 0.28);
 
-            border-radius: 14px;
+            padding: 17px;
+            margin: 13px 0;
+
+            border-radius: 15px;
 
             font-size: 16px;
             font-weight: bold;
 
-            transition: 0.25s ease;
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.18);
+
+            transition: all 0.25s ease;
         }
 
         .link:hover {
