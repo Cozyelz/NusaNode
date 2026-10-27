@@ -30,7 +30,7 @@
                 linear-gradient(
                     180deg,
                     #07111d 0%,
-                    #05080d 45%,
+                    #05080d 48%,
                     #030508 100%
                 );
 
@@ -39,7 +39,7 @@
         }
 
         .container {
-            width: 92%;
+            width: 90%;
             max-width: 900px;
             margin: auto;
         }
@@ -51,7 +51,7 @@
 
         .hero {
             text-align: center;
-            padding: 55px 0 40px;
+            padding: 50px 0 35px;
         }
 
         .logo {
@@ -78,7 +78,7 @@
             }
 
             50% {
-                transform: translateY(-7px);
+                transform: translateY(-6px);
             }
 
         }
@@ -101,25 +101,27 @@
         }
 
         .tagline {
-            margin-top: 8px;
+            margin-top: 7px;
             color: #1683ff !important;
             font-weight: bold;
         }
 
 
         /* =========================
-           BUTTONS
+           SOCIAL BUTTONS
         ========================= */
 
         .buttons {
-            margin-top: 30px;
+            margin-top: 28px;
         }
 
         .link {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 11px;
+            gap: 12px;
+
+            position: relative;
 
             text-decoration: none;
             color: white;
@@ -127,15 +129,17 @@
             background:
                 linear-gradient(
                     135deg,
-                    rgba(6, 74, 135, 0.95),
-                    rgba(4, 55, 101, 0.95)
+                    rgba(6, 74, 135, 0.96),
+                    rgba(4, 51, 92, 0.96)
                 );
 
-            border: 1px solid
+            border:
+                1px solid
                 rgba(22, 131, 255, 0.28);
 
-            padding: 17px;
-            margin: 13px 0;
+            padding: 16px;
+
+            margin: 12px 0;
 
             border-radius: 15px;
 
@@ -144,9 +148,13 @@
 
             box-shadow:
                 0 8px 25px
-                rgba(0, 0, 0, 0.18);
+                rgba(0, 0, 0, 0.2);
 
-            transition: all 0.25s ease;
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .link:visited {
@@ -169,19 +177,67 @@
 
             box-shadow:
                 0 10px 30px
-                rgba(22, 131, 255, 0.18);
+                rgba(22, 131, 255, 0.2);
         }
 
-        .icon {
-            display: inline-block;
-            font-size: 20px;
-            transition: 0.25s ease;
+
+        /* =========================
+           SOCIAL ICON BOX
+        ========================= */
+
+        .social-icon-box {
+
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background:
+                rgba(255, 255, 255, 0.06);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.08);
+
+            transition:
+                all 0.25s ease;
         }
 
-        .link:hover .icon {
+        .social-icon {
+
+            width: 23px;
+            height: 23px;
+
+            fill: currentColor;
+
+            transition:
+                transform 0.25s ease,
+                filter 0.25s ease;
+        }
+
+        .link:hover .social-icon-box {
+
+            background:
+                rgba(255, 255, 255, 0.1);
+
+            border-color:
+                rgba(255, 255, 255, 0.16);
+        }
+
+        .link:hover .social-icon {
+
             transform:
-                translateY(-2px)
-                scale(1.08);
+                scale(1.1);
+
+            filter:
+                drop-shadow(
+                    0 0 6px
+                    rgba(255, 255, 255, 0.35)
+                );
         }
 
 
@@ -190,20 +246,31 @@
         ========================= */
 
         .section {
-            padding: 45px 0;
+            padding: 50px 0;
         }
 
         .section-title {
+
             text-align: center;
+
             font-size: 28px;
-            margin-bottom: 10px;
+
+            margin-bottom: 9px;
+
+            letter-spacing: -0.5px;
         }
 
         .section-description {
+
             text-align: center;
+
             color: #8f9aaa;
+
             margin-bottom: 28px;
+
             line-height: 1.6;
+
+            font-size: 15px;
         }
 
 
@@ -212,8 +279,12 @@
         ========================= */
 
         .services {
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 15px;
         }
 
@@ -225,8 +296,8 @@
             background:
                 linear-gradient(
                     145deg,
-                    rgba(14, 23, 34, 0.95),
-                    rgba(7, 12, 18, 0.95)
+                    rgba(14, 23, 34, 0.97),
+                    rgba(7, 12, 18, 0.97)
                 );
 
             border:
@@ -235,9 +306,9 @@
 
             border-radius: 18px;
 
-            padding: 25px;
+            padding: 24px;
 
-            min-height: 220px;
+            min-height: 205px;
 
             overflow: hidden;
 
@@ -246,7 +317,9 @@
                 rgba(0, 0, 0, 0.18);
 
             transition:
-                all 0.25s ease;
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
 
@@ -256,10 +329,10 @@
 
             position: absolute;
 
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
 
-            top: -70px;
+            top: -80px;
             right: -70px;
 
             background:
@@ -267,7 +340,7 @@
 
             border-radius: 50%;
 
-            filter: blur(20px);
+            filter: blur(25px);
 
             pointer-events: none;
         }
@@ -279,7 +352,7 @@
                 translateY(-5px);
 
             border-color:
-                rgba(22, 131, 255, 0.55);
+                rgba(22, 131, 255, 0.5);
 
             box-shadow:
                 0 12px 35px
@@ -299,7 +372,7 @@
 
             justify-content: space-between;
 
-            margin-bottom: 18px;
+            margin-bottom: 19px;
         }
 
 
@@ -309,22 +382,22 @@
 
         .card-icon {
 
-            width: 54px;
-            height: 54px;
+            width: 55px;
+            height: 55px;
 
             display: flex;
 
             align-items: center;
             justify-content: center;
 
-            font-size: 26px;
+            font-size: 27px;
 
             background:
                 rgba(22, 131, 255, 0.08);
 
             border:
                 1px solid
-                rgba(22, 131, 255, 0.15);
+                rgba(22, 131, 255, 0.16);
 
             border-radius: 15px;
 
@@ -368,7 +441,6 @@
                 all 0.25s ease;
         }
 
-
         .card:hover .card-arrow {
 
             color: #1683ff;
@@ -384,7 +456,7 @@
 
         .card h3 {
 
-            font-size: 20px;
+            font-size: 19px;
 
             margin-bottom: 9px;
         }
@@ -405,6 +477,8 @@
 
         .about {
 
+            position: relative;
+
             background:
                 linear-gradient(
                     145deg,
@@ -422,16 +496,41 @@
 
             text-align: center;
 
+            overflow: hidden;
+
             box-shadow:
                 0 8px 25px
                 rgba(0, 0, 0, 0.15);
         }
 
+        .about::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            left: -100px;
+            bottom: -100px;
+
+            background:
+                rgba(22, 131, 255, 0.08);
+
+            border-radius: 50%;
+
+            filter: blur(25px);
+        }
+
         .about .section-title {
+
             margin-bottom: 15px;
         }
 
         .about p {
+
+            position: relative;
 
             color: #a5afbc;
 
@@ -484,7 +583,11 @@
             }
 
             .card {
-                min-height: 200px;
+                min-height: 195px;
+            }
+
+            .section {
+                padding: 45px 0;
             }
 
             .section-title {
@@ -529,49 +632,80 @@
 
             <div class="buttons">
 
+
+                <!-- DISCORD -->
+
                 <a
                     href="LINK_DISCORD"
                     class="link"
                 >
-                    <span class="icon">💬</span>
+
+                    <span class="social-icon-box">
+
+                        <svg
+                            class="social-icon"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M19.54 4.18A16.9 16.9 0 0 0 15.5 3l-.5 1.02a15.3 15.3 0 0 0-6 0L8.5 3a16.9 16.9 0 0 0-4.04 1.18C1.9 8.16 1.2 12.03 1.55 15.84A16.7 16.7 0 0 0 6.5 18.3l1.2-1.64a10.4 10.4 0 0 1-1.9-.92l.46-.35c3.67 1.7 7.64 1.7 11.27 0l.47.35c-.6.36-1.24.67-1.9.92l1.2 1.64a16.7 16.7 0 0 0 4.95-2.46c.42-4.42-.72-8.25-2.71-11.66ZM8.6 13.4c-1.1 0-2-.99-2-2.2s.88-2.2 2-2.2c1.13 0 2.02.99 2 2.2 0 1.21-.89 2.2-2 2.2Zm6.8 0c-1.1 0-2-.99-2-2.2s.88-2.2 2-2.2c1.13 0 2.02.99 2 2.2 0 1.21-.89 2.2-2 2.2Z"/>
+                        </svg>
+
+                    </span>
+
                     Discord NusaNode
+
                 </a>
 
+
+
+                <!-- WHATSAPP -->
 
                 <a
                     href="LINK_WHATSAPP"
                     class="link"
                 >
-                    <span class="icon">📱</span>
+
+                    <span class="social-icon-box">
+
+                        <svg
+                            class="social-icon"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M12 2a10 10 0 0 0-8.67 15.01L2 22l5.15-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.13l-.3-.18-3.05.77.82-2.97-.2-.31A8 8 0 1 1 12 20Zm4.4-5.92c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.18-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.01-.37.1-.49.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.8-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.43-.59 1.63-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/>
+                        </svg>
+
+                    </span>
+
                     Saluran WhatsApp
+
                 </a>
 
 
-                <a
-                    href="jasa.html"
-                    class="link"
-                >
-                    <span class="icon">🛠️</span>
-                    Daftar Jasa NusaNode
-                </a>
 
-
-                <a
-                    href="LINK_YOUTUBE"
-                    class="link"
-                >
-                    <span class="icon">▶️</span>
-                    YouTube NusaNode
-                </a>
-
+                <!-- TIKTOK -->
 
                 <a
                     href="LINK_TIKTOK"
                     class="link"
                 >
-                    <span class="icon">🎵</span>
+
+                    <span class="social-icon-box">
+
+                        <svg
+                            class="social-icon"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path d="M16.6 3c.35 1.95 1.48 3.25 3.4 3.4v2.7c-1.15.1-2.2-.26-3.35-.92v6.1c0 3.77-2.77 6.1-6.1 6.1-3.2 0-5.55-2.4-5.55-5.42 0-3.3 2.7-5.72 6.05-5.72.35 0 .7.03 1.04.1v2.8a4.1 4.1 0 0 0-1.04-.14c-1.62 0-3.15 1.12-3.15 2.94 0 1.55 1.2 2.63 2.67 2.63 1.72 0 3.08-1.05 3.08-3.35V3h2.95Z"/>
+                        </svg>
+
+                    </span>
+
                     TikTok NusaNode
+
                 </a>
+
 
             </div>
 
@@ -586,11 +720,11 @@
         <section class="section">
 
             <h2 class="section-title">
-                🛠️ Layanan NusaNode
+                Layanan NusaNode
             </h2>
 
             <p class="section-description">
-                Solusi Minecraft untuk server dan komunitas kamu.
+                Solusi untuk berbagai kebutuhan Minecraft.
             </p>
 
 
