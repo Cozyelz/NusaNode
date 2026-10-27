@@ -69,11 +69,16 @@
         /* Animasi ikon */
         .icon {
             display: inline-block;
-            transition: 0.3s;
-        }
+            animation: iconFloat 1.5s ease-in-out infinite;
+         }
 
-        .link:hover .icon {
-            transform: scale(1.2);
+         @keyframes iconFloat {
+             0%, 100% {
+                 transform: translateY(0);
+             }
+             50% {
+                 transform: translateY(-4px)
+            }
         }
 
         footer {
