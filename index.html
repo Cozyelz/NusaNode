@@ -7,6 +7,7 @@
     <title>NusaNode — Minecraft Services</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -19,9 +20,20 @@
 
         body {
             font-family: Arial, sans-serif;
+
             background:
-                radial-gradient(circle at 50% -10%, rgba(22, 131, 255, 0.28), transparent 35%),
-                linear-gradient(180deg, #07111d 0%, #05080d 45%, #030508 100%);
+                radial-gradient(
+                    circle at 50% -10%,
+                    rgba(22, 131, 255, 0.28),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    180deg,
+                    #07111d 0%,
+                    #05080d 45%,
+                    #030508 100%
+                );
+
             color: white;
             min-height: 100vh;
         }
@@ -32,7 +44,10 @@
             margin: auto;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             text-align: center;
@@ -42,13 +57,22 @@
         .logo {
             width: 125px;
             max-width: 55%;
+
             margin-bottom: 18px;
+
             border-radius: 20px;
-            filter: drop-shadow(0 0 22px rgba(22, 131, 255, 0.4));
+
+            filter:
+                drop-shadow(
+                    0 0 22px
+                    rgba(22, 131, 255, 0.4)
+                );
+
             animation: logoFloat 3s ease-in-out infinite;
         }
 
         @keyframes logoFloat {
+
             0%, 100% {
                 transform: translateY(0);
             }
@@ -56,7 +80,9 @@
             50% {
                 transform: translateY(-7px);
             }
+
         }
+
 
         .hero h1 {
             font-size: 42px;
@@ -80,7 +106,10 @@
             font-weight: bold;
         }
 
-        /* BUTTONS */
+
+        /* =========================
+           BUTTONS
+        ========================= */
 
         .buttons {
             margin-top: 30px;
@@ -95,13 +124,15 @@
             text-decoration: none;
             color: white;
 
-            background: linear-gradient(
-                135deg,
-                rgba(6, 74, 135, 0.95),
-                rgba(4, 55, 101, 0.95)
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(6, 74, 135, 0.95),
+                    rgba(4, 55, 101, 0.95)
+                );
 
-            border: 1px solid rgba(22, 131, 255, 0.28);
+            border: 1px solid
+                rgba(22, 131, 255, 0.28);
 
             padding: 17px;
             margin: 13px 0;
@@ -112,35 +143,51 @@
             font-weight: bold;
 
             box-shadow:
-                0 8px 25px rgba(0, 0, 0, 0.18);
+                0 8px 25px
+                rgba(0, 0, 0, 0.18);
 
             transition: all 0.25s ease;
         }
 
+        .link:visited {
+            color: white;
+        }
+
         .link:hover {
+
             transform: translateY(-3px);
-            background: #0a5ca8;
-            border-color: #1683ff;
-            box-shadow: 0 8px 25px rgba(22, 131, 255, 0.2);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b68b8,
+                    #064a87
+                );
+
+            border-color:
+                rgba(22, 131, 255, 0.7);
+
+            box-shadow:
+                0 10px 30px
+                rgba(22, 131, 255, 0.18);
         }
 
         .icon {
             display: inline-block;
             font-size: 20px;
-            animation: iconFloat 2s ease-in-out infinite;
+            transition: 0.25s ease;
         }
 
-        @keyframes iconFloat {
-            0%, 100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-3px) rotate(2deg);
-            }
+        .link:hover .icon {
+            transform:
+                translateY(-2px)
+                scale(1.08);
         }
 
-        /* SECTION */
+
+        /* =========================
+           SECTION
+        ========================= */
 
         .section {
             padding: 45px 0;
@@ -156,9 +203,13 @@
             text-align: center;
             color: #8f9aaa;
             margin-bottom: 28px;
+            line-height: 1.6;
         }
 
-        /* SERVICES */
+
+        /* =========================
+           SERVICES
+        ========================= */
 
         .services {
             display: grid;
@@ -166,94 +217,306 @@
             gap: 15px;
         }
 
-        .card {
-            background: rgba(13, 18, 25, 0.85);
-            border: 1px solid #1d2936;
-            border-radius: 16px;
-            padding: 24px;
 
-            transition: 0.25s ease;
+        .card {
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(14, 23, 34, 0.95),
+                    rgba(7, 12, 18, 0.95)
+                );
+
+            border:
+                1px solid
+                rgba(80, 120, 160, 0.16);
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            min-height: 220px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.18);
+
+            transition:
+                all 0.25s ease;
         }
+
+
+        .card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 140px;
+            height: 140px;
+
+            top: -70px;
+            right: -70px;
+
+            background:
+                rgba(22, 131, 255, 0.08);
+
+            border-radius: 50%;
+
+            filter: blur(20px);
+
+            pointer-events: none;
+        }
+
 
         .card:hover {
-            transform: translateY(-5px);
-            border-color: #1683ff;
-            box-shadow: 0 10px 30px rgba(22, 131, 255, 0.12);
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(22, 131, 255, 0.55);
+
+            box-shadow:
+                0 12px 35px
+                rgba(22, 131, 255, 0.12);
         }
+
+
+        /* =========================
+           CARD TOP
+        ========================= */
+
+        .card-top {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            justify-content: space-between;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================
+           CARD ICON
+        ========================= */
 
         .card-icon {
-            font-size: 30px;
-            margin-bottom: 14px;
+
+            width: 54px;
+            height: 54px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 26px;
+
+            background:
+                rgba(22, 131, 255, 0.08);
+
+            border:
+                1px solid
+                rgba(22, 131, 255, 0.15);
+
+            border-radius: 15px;
+
+            box-shadow:
+                inset 0 0 20px
+                rgba(22, 131, 255, 0.04);
+
+            transition:
+                all 0.25s ease;
         }
 
+
+        .card:hover .card-icon {
+
+            transform:
+                translateY(-2px);
+
+            background:
+                rgba(22, 131, 255, 0.14);
+
+            border-color:
+                rgba(22, 131, 255, 0.35);
+
+            box-shadow:
+                0 0 20px
+                rgba(22, 131, 255, 0.12);
+        }
+
+
+        /* =========================
+           CARD ARROW
+        ========================= */
+
+        .card-arrow {
+
+            font-size: 25px;
+
+            color: #687381;
+
+            transition:
+                all 0.25s ease;
+        }
+
+
+        .card:hover .card-arrow {
+
+            color: #1683ff;
+
+            transform:
+                translateX(4px);
+        }
+
+
+        /* =========================
+           CARD TEXT
+        ========================= */
+
         .card h3 {
-            margin-bottom: 8px;
+
+            font-size: 20px;
+
+            margin-bottom: 9px;
         }
 
         .card p {
+
             color: #929dab;
+
             font-size: 14px;
-            line-height: 1.6;
+
+            line-height: 1.65;
         }
 
-        /* ABOUT */
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
-            background: rgba(13, 18, 25, 0.75);
-            border: 1px solid #1d2936;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(14, 23, 34, 0.9),
+                    rgba(7, 12, 18, 0.9)
+                );
+
+            border:
+                1px solid
+                rgba(80, 120, 160, 0.16);
+
             border-radius: 18px;
-            padding: 28px;
+
+            padding: 30px;
+
             text-align: center;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.15);
+        }
+
+        .about .section-title {
+            margin-bottom: 15px;
         }
 
         .about p {
+
             color: #a5afbc;
+
             line-height: 1.7;
+
+            font-size: 15px;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
+
             text-align: center;
-            padding: 35px 0;
+
+            padding: 35px 0 45px;
+
             color: #687381;
+
             font-size: 13px;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 600px) {
 
+            .container {
+                width: 90%;
+            }
+
             .hero {
-                padding-top: 50px;
+                padding-top: 45px;
             }
 
             .hero h1 {
-                font-size: 34px;
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 15px;
             }
 
             .services {
                 grid-template-columns: 1fr;
             }
 
+            .card {
+                min-height: 200px;
+            }
+
             .section-title {
                 font-size: 25px;
             }
+
         }
+
     </style>
 </head>
+
 
 <body>
 
     <div class="container">
 
-        <!-- HERO -->
+
+        <!-- =========================
+             HERO
+        ========================= -->
 
         <section class="hero">
 
-            <img src="logo.png" class="logo" alt="NusaNode">
+            <img
+                src="logo.png"
+                class="logo"
+                alt="NusaNode"
+            >
 
-            <h1>Nusa<span>Node</span></h1>
+            <h1>
+                Nusa<span>Node</span>
+            </h1>
 
             <p>
                 Minecraft Server • Community • Services
@@ -263,29 +526,49 @@
                 Build. Create. Play.
             </p>
 
+
             <div class="buttons">
 
-                <a href="LINK_DISCORD" class="link">
+                <a
+                    href="LINK_DISCORD"
+                    class="link"
+                >
                     <span class="icon">💬</span>
                     Discord NusaNode
                 </a>
 
-                <a href="LINK_WHATSAPP" class="link">
+
+                <a
+                    href="LINK_WHATSAPP"
+                    class="link"
+                >
                     <span class="icon">📱</span>
                     Saluran WhatsApp
                 </a>
 
-                <a href="jasa.html" class="link">
+
+                <a
+                    href="jasa.html"
+                    class="link"
+                >
                     <span class="icon">🛠️</span>
                     Daftar Jasa NusaNode
                 </a>
 
-                <a href="LINK_YOUTUBE" class="link">
+
+                <a
+                    href="LINK_YOUTUBE"
+                    class="link"
+                >
                     <span class="icon">▶️</span>
                     YouTube NusaNode
                 </a>
 
-                <a href="LINK_TIKTOK" class="link">
+
+                <a
+                    href="LINK_TIKTOK"
+                    class="link"
+                >
                     <span class="icon">🎵</span>
                     TikTok NusaNode
                 </a>
@@ -295,7 +578,10 @@
         </section>
 
 
-        <!-- SERVICES -->
+
+        <!-- =========================
+             SERVICES
+        ========================= -->
 
         <section class="section">
 
@@ -307,13 +593,29 @@
                 Solusi Minecraft untuk server dan komunitas kamu.
             </p>
 
+
             <div class="services">
+
+
+                <!-- SETUP SERVER -->
 
                 <div class="card">
 
-                    <div class="card-icon">🖥️</div>
+                    <div class="card-top">
 
-                    <h3>Setup Server</h3>
+                        <div class="card-icon">
+                            🖥️
+                        </div>
+
+                        <span class="card-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Setup Server
+                    </h3>
 
                     <p>
                         Setup dan konfigurasi server Minecraft
@@ -323,11 +625,26 @@
                 </div>
 
 
+
+                <!-- CUSTOM PLUGIN -->
+
                 <div class="card">
 
-                    <div class="card-icon">⚙️</div>
+                    <div class="card-top">
 
-                    <h3>Custom Plugin</h3>
+                        <div class="card-icon">
+                            ⚙️
+                        </div>
+
+                        <span class="card-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Custom Plugin
+                    </h3>
 
                     <p>
                         Pembuatan plugin custom dengan fitur
@@ -337,11 +654,26 @@
                 </div>
 
 
+
+                <!-- JUAL PLUGIN -->
+
                 <div class="card">
 
-                    <div class="card-icon">🛒</div>
+                    <div class="card-top">
 
-                    <h3>Jual Plugin</h3>
+                        <div class="card-icon">
+                            🛒
+                        </div>
+
+                        <span class="card-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Jual Plugin
+                    </h3>
 
                     <p>
                         Plugin Minecraft untuk membantu
@@ -351,11 +683,26 @@
                 </div>
 
 
+
+                <!-- EDITING -->
+
                 <div class="card">
 
-                    <div class="card-icon">🎬</div>
+                    <div class="card-top">
 
-                    <h3>Jasa Editing</h3>
+                        <div class="card-icon">
+                            🎬
+                        </div>
+
+                        <span class="card-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Jasa Editing
+                    </h3>
 
                     <p>
                         Editing video dengan hasil yang
@@ -364,12 +711,16 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
 
-        <!-- ABOUT -->
+
+        <!-- =========================
+             ABOUT
+        ========================= -->
 
         <section class="section">
 
@@ -380,9 +731,10 @@
                 </h2>
 
                 <p>
-                    NusaNode adalah layanan dan komunitas yang
-                    berfokus pada Minecraft, server management,
-                    plugin, serta berbagai kebutuhan kreatif.
+                    NusaNode adalah layanan dan komunitas
+                    yang berfokus pada Minecraft, server
+                    management, plugin, serta berbagai
+                    kebutuhan kreatif.
                 </p>
 
             </div>
@@ -390,13 +742,19 @@
         </section>
 
 
-        <!-- FOOTER -->
+
+        <!-- =========================
+             FOOTER
+        ========================= -->
 
         <footer>
+
             © 2026 NusaNode • All Rights Reserved
+
         </footer>
+
 
     </div>
 
 </body>
-</html>
+    </html>
